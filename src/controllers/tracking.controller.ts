@@ -2,6 +2,7 @@ import { Request, Response, NextFunction } from 'express';
 import { IBatchType, IFile } from '../types/batch.type';
 import { SIGNUP_TRACK } from '../enums/track.enum';
 import { generateCSV, hashEmail, uploadToFTP } from '../services/signup.service';
+import { v1 as uuidv1 } from 'uuid';
 
 export class LandingController {
   static async trackSignup(req: Request, res: Response, next: NextFunction) {
@@ -18,7 +19,7 @@ export class LandingController {
       ClickId: irclickid,
       CustomerEmail: email ? hashEmail(email) : '',
       CustomerId: '',
-      OrderId: '',
+      OrderId: uuidv1(),
     };
 
     const fileInfo = await generateCSV(signup);

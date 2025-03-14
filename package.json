@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "dev": "ts-node src/index.ts",
+    "dev": "nodemon --ext ts --exec ts-node src/index.ts",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
@@ -20,7 +20,8 @@
     "ftp": "^0.3.10",
     "morgan": "^1.10.0",
     "node-cron": "^3.0.3",
-    "path": "^0.12.7"
+    "path": "^0.12.7",
+    "uuid": "^11.1.0"
   },
   "devDependencies": {
     "@types/cors": "^2.8.17",
@@ -33,3 +34,4 @@
     "typescript": "^5.8.2"
   }
 }
+
