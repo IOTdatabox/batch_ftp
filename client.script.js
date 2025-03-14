@@ -8,6 +8,7 @@ if (window.location.search.includes('irclickid')) {
 // Attach irclickid to all links on the site
 document.addEventListener('DOMContentLoaded', function () {
   const submitButton = document.getElementById('submit_btn');
+  console.log('dom content loaded...', submitButton, localStorage.getItem('irclickid'));
 
   if (submitButton) {
     submitButton.addEventListener('click', async function () {
