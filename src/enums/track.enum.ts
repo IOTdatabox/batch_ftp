@@ -1,0 +1,4 @@
+export enum SIGNUP_TRACK {
+  CAMPAIGN_ID = 30923,
+  ACTION_TRACKER_ID = 53272,
+}
